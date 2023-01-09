@@ -1,0 +1,171 @@
+html{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Black-Gradient: hsl(0, 56%, 8%);
+    --Dark-White: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: rgba(105, 105, 105, 0.774);
+    --Earth-Blue: hsl(222, 86%, 11%);
+    --Earth-Blue-Two: rgba(4, 18, 52, 0.664);
+    --Font-One: "Overpass", sans-serif;
+    --Font-Two: "Archivo", sans-serif;
+    --Dark-Gray: hsl(0, 1%, 35%);
+    --Green: hsla(147, 58%, 47%, 0.692);
+    --Forest-Green-Glass: hsla(146, 89%, 19%, 0.562);
+    --Yellow: hsl(54, 92%, 51%);
+    --Dark-Red: hsla(0, 93%, 45%, 0.719);
+    --Dark-Yellow: hsla(44, 89%, 45%, 0.562);
+    --Light-Blue: hsla(199, 92%, 50%, 0.993);
+    --Amethyst-Dark: hsla(333, 84%, 10%, 0.638);
+}
+*{
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: var(--Green);
+}
+button{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+button:hover{
+    background-color: var(--Dark-White);
+}
+.screen{
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 20%;
+    background-color: var(--Dark-Gray);
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+}
+.clear-screen{
+    background-color: var(--Dark-Red);
+    color: var(--White);
+}
+.clear-screen:hover, .clear-screen:focus{
+    background-color: var(--Light-Blue);
+    color: var(--Black-Gradient);
+}
+.wrapper{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    height: 65%;
+    background-color: var(--Earth-Blue);
+    border-radius: 20px;
+    box-shadow: 0px 0px 43px 17px var(--Very-Dark-Gray);
+}
+.numbers-grid{
+    display: grid;
+    width: 70%;
+    max-width: 85%;
+    margin: auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    position: absolute;
+    bottom: 20px;
+    left: 15%;
+}
+.numbers-grid button{
+    height: 50px;
+}
+.operators-div{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    
+}
+#equals{
+    background-color: var(--Yellow);
+    color: var(--Black-Gradient);
+}
+#equals:hover{
+    background-color: var(--Green);
+    color: var(--White);
+}
+.operators-div button{
+    width: 60px;
+    margin: 2px;
+    height: 30px;
+}
+@media all and (max-width: 768px){
+    .wrapper{
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        width: 50%;
+        height: 66%;
+        background-color: var(--Earth-Blue);
+        border-radius: 20px;
+    }
+    .operators-div{
+        position: absolute;
+        top: 38%;
+        left: 8%;
+        
+    }
+    .operators-div button{
+        width: 50px;
+        margin: 2px;
+        height: 30px;
+    }
+    .numbers-grid{
+        display: grid;
+        width: 80%;
+        max-width: 90%;
+        margin: auto;
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        position: absolute;
+        bottom: 30px;
+        left: 10%;
+    }
+    .numbers-grid button{
+        height: 50px;
+    }
+     
+}
+@media all and (width <= 600px){
+    .wrapper{
+        width: 60%;
+        left: 20%;
+    }
+    .operators-div{
+        left: 10%;
+    }
+    .numbers-grid{
+        bottom: 40px;
+    }
+}
+
+@media all and (width <= 425px){
+    .wrapper{
+        width: 80%;
+        left: 10%;
+    }
+    .operators-div{
+        left: 8%;
+    }
+}
+@media all and (width <= 375px){
+    .wrapper{
+        width: 90%;
+        left: 5%;
+    }
+}
+

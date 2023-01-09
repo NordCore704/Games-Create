@@ -1,0 +1,159 @@
+html{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Black-Gradient: hsl(0, 56%, 8%);
+    --Dark-White: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: rgba(105, 105, 105, 0.774);
+    --Earth-Blue: hsl(222, 86%, 11%);
+    --Earth-Blue-Two: rgba(4, 18, 52, 0.664);
+    --Font-One: "Overpass", sans-serif;
+    --Font-Two: "Archivo", sans-serif;
+    --Dark-Gray: hsl(0, 1%, 35%);
+    --Green: hsla(147, 58%, 47%, 0.692);
+    --Forest-Green-Glass: hsla(146, 89%, 19%, 0.562);
+    --Yellow: hsl(54, 92%, 51%);
+    --Dark-Red: hsla(0, 93%, 45%, 0.719);
+    --Dark-Yellow: hsla(44, 89%, 45%, 0.562);
+    --Light-Blue: hsla(199, 92%, 50%, 0.993);
+    --Amethyst-Dark: hsla(333, 84%, 10%, 0.638);
+    --Dark: rgba(8, 224, 105, 0.9);
+    --Dark-New: rgba(201, 252, 15, 0.925);
+    scrollbar-color: var(--Forest-Green-Glass);
+}
+html::-webkit-scrollbar{
+    width: 2vw;
+    background-color: var(--Green);
+    border-radius: 20px;
+}
+html::-webkit-scrollbar-thumb{
+    width: 2vw;
+    height: .5vh;
+    background-color: var(--Dark-New);
+    border-radius: 20px;
+    transition: 0.7s ease-in-out;
+}
+html::-webkit-scrollbar-thumb:hover{
+    width: 2vw;
+    background-color: var(--Light-Blue);
+}
+*{
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+body{
+    background-color: var(--Earth-Blue);
+}
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+button:hover{
+    background-color: var(--Dark-White);
+}
+.wrapper{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.Enter-btn{
+    width: 70px;
+    height: 25px;
+    background-color: var(--Green);
+    margin: 0 0 0 10px;
+    color: var(--White);
+}
+.Enter-btn:hover{
+    background-color: var(--Yellow);
+    color: var(--Black);
+    border: 1px solid var(--White);
+}
+.clear-list{
+    margin: 0 0 0 10px;
+    width: 70px;
+    height: 25px;
+    background-color: var(--Yellow);
+}
+.clear-list:hover{
+    background-color: var(--Green);
+    color: var(--White);
+    border: 1px solid var(--White);
+}
+.input-field{
+    height: 25px;
+    border: 2px solid var(--Dark-Red);
+    width: 200px;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+.input-field:focus{
+    border-color: var(--Dark-Red);
+}
+input:invalid{
+    animation: shake .3s;
+  }
+  @keyframes shake {
+    25%{
+      transform: translateX(4px);
+    }
+    50%{
+      transform: translateX(-4px);
+    }
+    75%{
+      transform: translateX(4px);
+    }
+  }
+.list-items{
+    background-color: var(--Earth-Blue-Two);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 3;
+    position: relative;
+}
+.list-items p{
+    width: 80%;
+    margin: 5px 0 5px 0;
+    background-color: var(--Light-Blue);
+    color: var(--Black-Gradient);
+    padding: 5px 5px 5px 20px;
+    border: 2px solid var(--Yellow);
+    border-radius: 5px;
+    
+}
+.list-items .deleteItem{
+   width: 35px;
+   height: 33px;
+   background-color: var(--Dark);
+   position: relative;
+   right: -45%;
+   top: -40px;
+   border: 2px solid var(--Dark-Red);
+}
+.list-items .deleteItem:hover{
+    background-color: var(--Dark-New);
+    border: 2px solid var(--White);
+}
+.list-items .markDone{
+width: 35px;
+height: 33px;
+background-color: var(--Dark-New);
+position: relative;
+right: 45%;
+top: -72px;
+border: 2px solid var(--Light-Blue);
+}
+.list-items .markDone:hover{
+ background-color: var(--Dark);
+ border: 2px solid var(--White);
+}
